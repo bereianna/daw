@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+    </head>
+    <body>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <button onclick="greet()">Say hello!</button>
+        </div>
+        <div>
+            <button id="animation-button" onclick="animation()">Unfreeze!</button>
+        </div>
+        <div>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+        </div>
+        <div id="walking-man-container">
+            <img src="walk1.png" alt="walking man1" title="walking man2">
+        </div>
+        <script>
+            var colors = ['red', 'blue', 'salmon'];
+            var walkingManInterval = null;
+            function greet() {
+                console.log(document);
+                var nameInput = document.getElementById('username');
+                console.log(nameInput);
+                var name = nameInput.value;
+                console.log('Hello ' + name + '!!');
+                var headings = document.getElementsByTagName('h1');
+                console.log(headings);
+                for(var i = 0; i < headings.length; i++) {
+                    headings[i].innerHTML = 'Hello ' + name + '!!';
+                    // break;
+                    console.log(headings[i]);
+                    headings[i].style.color = colors[i % 3];
+                }
+            }
+            //startAnimation();
+
+
+            function startAnimation() {
+                var container = document.getElementById('walking-man-container');
+                var imageElement = container.getElementsByTagName('img')[0];
+                var index = 2;
+                var elementLeft = 100;
+                imageElement.style.position = 'absolute';
+                imageElement.style.left = elementLeft + 'px';
+                var direction = 0;
+                walkingManInterval = setInterval(function() {
+                    imageElement.src = 'walk' + index + '.png'
+                    index++;
+                    if(index == 9) {
+                        index = 1;
+                        direction = 1 - direction;
+                        if(direction == 0) {
+                            imageElement.style.transform = 'scaleX(1)';
+                        }
+                        else {
+                            imageElement.style.transform = 'scaleX(-1)';
+                        }
+                    }
+                    console.log(imageElement.offsetLeft);
+                    if(direction == 0) {
+                        elementLeft += 100;    
+                    }
+                    else {
+                        elementLeft -= 100;
+                    }
+                    imageElement.style.left = elementLeft + 'px';
+                }, 100);
+            }
+
+            function stopAnimation() {
+                clearInterval(walkingManInterval);
+            }
+
+            function animation() {
+                var button = document.getElementById('animation-button');
+                if(button.innerHTML == 'Freeze') {
+                    stopAnimation();
+                    button.innerHTML = 'Unfreeze'
+                }
+                else {
+                    startAnimation();
+                    button.innerHTML = 'Freeze'
+                }
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+body {
+    margin: 0px;
+}
+.navbar {
+    height: 100px;
+    background: maroon;
+    width: 100%;			
+}
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;			
+}
+.navbar .menu > .menu-item {
+    padding: 10px 30px;
+    background: beige;
+    color: maroon;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 0px 20px;	
+    position: relative;		
+}
+.navbar .menu > .menu-item .submenu {
+    display: none;
+}
+.navbar .menu > .menu-item:hover .submenu {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 40px;
+}
+.navbar .menu > .menu-item:hover .submenu .menu-item {
+    padding: 10px 30px;
+    background: beige;
+}
+.container {
+    width: 100%;
+    display: flex;
+}
+.container .sidebar {
+    width: 25%;
+    padding: 25px;
+    border-right: 1px solid maroon;
+    box-sizing: border-box;
+}
+.container .sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .sidebar .menu .menu-item {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px black;
+    margin: 20px 0px;
+}
+.container .content {
+    width: 75%;
+    padding: 25px;
+    box-sizing: border-box;
+    height: 600px;
+}
+.clearfix {
+    clear: both;
+}
+.lateral-menu:hover .menu {
+    right: 0px;
+    height: 300px;
+    top: calc(50% - 150px);
+}
+.lateral-menu:hover .trigger {
+    height: 300px;
+    top: calc(50% - 150px);
+    border-radius: 25px;
+}
+.lateral-menu .trigger {
+    position: fixed;
+    height: 60px;
+    top: calc(50% - 15px);
+    right: 10px;
+    border-radius: 50%;
+    width: 60px;
+    background-color: darkgreen;
+    color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 1s linear, top 1s linear, border-radius 1s linear;
+}
+.lateral-menu .menu {
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    top: calc(50% - 50px);
+    right: -200px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background: darkgreen;
+    color: beige;
+    /*animation: lateral-menu;
+    animation-duration: 2s;
+    animation-timing-function: linear;*/
+    transition: right 1s linear, height 1s linear, top 1s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.lateral-menu .menu .menu-item {
+    padding: 20px;
+    font-size: 20px;
+}
+@keyframes lateral-menu {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 0px;
+    }
+}
