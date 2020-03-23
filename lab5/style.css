@@ -1,0 +1,71 @@
+.navbar {
+  width: 1200px;
+  height: 95px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+}
+.navbar .logo-container {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.navbar .main-menu {
+  width: 50%;
+}
+.navbar .secondary-menu {
+  width: 25%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu-item {
+  padding: 0px 10px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.footer {
+  width: 1150px;
+  margin: 0px auto;
+  height: 300px;
+  padding: 25px;
+  background-color: #1f373d;
+  color: #93bdc8;
+}
+
+body {
+  margin: 0px;
+  color: #1f373d;
+  font-size: 14px;
+}
+
+a {
+  color: #1f373d;
+  text-decoration: none;
+}
+a:hover {
+  color: #1f373d;
+  text-decoration: none;
+}
+
+.yellow-btn, .yellow-btn-small {
+  background-color: #ffcc01;
+  padding: 15px 25px !important;
+}
+
+.yellow-btn-small {
+  font-size: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

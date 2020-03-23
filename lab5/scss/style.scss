@@ -1,0 +1,28 @@
+@import '_variable';
+@import '_mixins';
+@import '_navbar';
+@import '_container';
+@import '_footer';
+
+body {
+    margin: 0px;
+    color: $font-color;
+    font-size: 14px;
+}
+a {
+    color: $font-color;
+    text-decoration: none;
+    &:hover {
+        color: $font-color;
+        text-decoration: none;
+    }
+}
+
+.yellow-btn {
+    @include yellow-btn($border-radius: 0);
+}
+
+.yellow-btn-small {
+    @extend .yellow-btn;
+    font-size: 5px;
+}

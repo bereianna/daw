@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+}
+body a {
+  width: 100px;
+  height: 40px;
+  background-color: #e26b3b;
+  color: #3bb2e2;
+}
+body a:hover {
+  width: 100px;
+  height: 40px;
+  background-color: aqua;
+  color: red;
+}
+
+/*# sourceMappingURL=lab5.css.map */

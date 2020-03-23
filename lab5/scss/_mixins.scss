@@ -1,0 +1,13 @@
+@mixin flex-display($justify-content: center, $align-items: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin yellow-btn($border-radius: 1) {
+    background-color: $yellow;
+    padding: 15px 25px !important;
+    @if ($border-radius == 1) {
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,10 @@
+@use "sass:color";
+
+.footer {
+    width: $page-width - 50px;
+    margin: 0px auto;
+    height: 300px;
+    padding: 25px;
+    background-color: $font-color;
+    color: lighten($font-color, 50%);
+}

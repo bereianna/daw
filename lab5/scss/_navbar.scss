@@ -1,0 +1,24 @@
+.navbar {
+    width: $page-width;
+    height: $navbar-height;
+    margin: 0px auto;
+    @include flex-display($align-items: initial);
+    .logo-container {
+        width: 25%;
+        @include flex-display;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .main-menu {
+        width: 50%;
+    }
+    .secondary-menu {
+        width: 25%;
+    }
+}
+.menu {
+    @include flex-display;
+    .menu-item {
+        padding: 0px 10px;
+    }
+}

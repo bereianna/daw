@@ -44,5 +44,7 @@ $(document).ready(function() {
       }
    });
 
-   $('#students-table').DataTable();
+   $('#students-table').DataTable({
+      
+   });
 });

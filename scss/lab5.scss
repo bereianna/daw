@@ -1,0 +1,19 @@
+@use "sass:color";
+@import "variables";
+
+@mixin button($color) {
+    width: 100px;
+    height: 40px;
+    background-color: color.complement($color);
+    color: $color;
+}
+body {
+    margin: 0px;
+    a {
+        @include button($blue);
+        &:hover {
+            @include button(red);
+        }
+    }
+    
+}
